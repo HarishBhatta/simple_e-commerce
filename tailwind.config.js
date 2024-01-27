@@ -2,6 +2,9 @@
 export default {
   content: [],
   theme: {
+    fontFamily: {
+      poppins: 'Poppins',
+    },
     extend: {},
   },
   plugins: [],
