@@ -1,12 +1,24 @@
 import { useState } from 'react';
 import './App.css';
-import {BrowserRouter as Router, Route, Routes} from 'react-router-dom'
+import {BrowserRouter as Router, Route, Routes} from 'react-router-dom';
 import Home from './pages/Home';
-import ProductDetails from './pages/ProductDetails'
+import ProductDetails from './pages/ProductDetails';
+import Header from './components/Header';
+import Sidebar from './components/Sidebar';
+import Footer from './components/Footer';
 function App() {
   return (
     <>
-     <div className=''>This is start</div>
+     <div className='overflow-hidden'>
+      <Router>
+        <Routes>
+          <Route path='/' element ={<Home />} />
+          <Route path='/product/:id' element ={<ProductDetails />} />
+        </Routes>
+      </Router>
+      <Sidebar />
+      <Footer />
+     </div>
     </>
   )
 }
