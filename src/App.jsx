@@ -10,6 +10,7 @@ function App() {
   return (
     <>
      <div className='overflow-hidden'>
+      <Header />
       <Router>
         <Routes>
           <Route path='/' element ={<Home />} />
