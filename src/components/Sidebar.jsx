@@ -1,9 +1,9 @@
 import React, { useContext } from 'react';
 // import Link
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 //import icons
 import { IoMdArrowForward } from 'react-icons/io';
-import { FiTrash } from 'react-icons/fi';
+import { FiTrash2 } from 'react-icons/fi';
 //import components
 import CartItem from '../components/CartItem';
 //import sidebar context
@@ -26,11 +26,11 @@ const Sidebar = () => {
       </div>
       <div>
         {cart.map((item) => {
-        return <CartItem item = {item} key={item.id}/>;
-      })}
+          return <CartItem item={item} key={item.id}  />;
+        })}
       </div>
     </div>
-  )
+  );
 }
 
 export default Sidebar

@@ -1,6 +1,5 @@
-import React from 'react'
+import React from 'react';
 import { Link } from 'react-router-dom';
-
 const CartItem = ({item}) => {
 // Destructuring items
   const {id, title, image, price, amount} = item;  
@@ -10,12 +9,8 @@ const CartItem = ({item}) => {
 {/* Image */}
         
         <div>
-          <Link to={'/product/${id}'} >
-          <img 
-            src={image} 
-            alt=""
-            className='max-w-[80px]'
-          />
+          <Link to={`/product/${id}`} >
+          <img src={image} alt=""className='max-w-[80px]' />
           </Link>
         </div>
       </div>
