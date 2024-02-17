@@ -4,7 +4,7 @@ export const SidebarContext = createContext();
 const SidebarProvider = ({children}) => {
   const [isOpen, setIsOpen] = useState(false);
   const handleClose = () => {
-    setIsOpen(false);
+    setIsOpen(!isOpen);
   }
   return (
     //Sidebar State
