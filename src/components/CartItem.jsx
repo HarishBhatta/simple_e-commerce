@@ -7,7 +7,7 @@ import { CartContext } from '../context/CartContext';
 
 
 const CartItem = ({item}) => {
-  const { removeFromCart, increaseAmount } = useContext(CartContext);
+  const { removeFromCart, increaseAmount, decreaseAmount } = useContext(CartContext);
 // Destructuring items
   const {id, title, image, price, amount} = item;  
   return (
@@ -45,7 +45,7 @@ const CartItem = ({item}) => {
             {amount}
           </div>
 {/**Add Icon */}
-          <div onCanPlay={() => increaseAmount(id)} className='flex-1 h-full flex justify-center items-center cursor-pointer'>
+          <div onClick={() => increaseAmount(id)} className='flex-1 h-full flex justify-center items-center cursor-pointer'>
             <IoMdAdd />
           </div>
           </div>
